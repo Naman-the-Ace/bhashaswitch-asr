@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bhashaswitch"
+version = "0.1.0"
+description = "Hindi-English Code-Switching Speech Recognition Evaluation Benchmark"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [
+    {name = "Naman", email = "naman@agentops.dev"},
+]
+keywords = ["asr", "speech-recognition", "hindi", "hinglish", "code-switching", "wer"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "jiwer>=3.0.0",
+    "soundfile>=0.12.0",
+    "matplotlib>=3.7.0",
+    "rapidfuzz>=3.0.0",
+]
+
+[project.optional-dependencies]
+transformers = ["transformers>=4.36.0", "torch>=2.1.0"]
+faster-whisper = ["faster-whisper>=1.0.0"]
+viz = ["streamlit>=1.28.0", "plotly>=5.18.0"]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.1.0",
+]
+all = ["bhashaswitch[transformers,faster-whisper,viz,dev]"]
+
+[project.scripts]
+bhashaswitch = "bhashaswitch.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Naman-the-Ace/bhashaswitch-asr"
+Repository = "https://github.com/Naman-the-Ace/bhashaswitch-asr"
+Issues = "https://github.com/Naman-the-Ace/bhashaswitch-asr/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

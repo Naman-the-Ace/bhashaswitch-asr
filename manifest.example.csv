@@ -1,0 +1,9 @@
+clip_id,audio_path,language,reference,hypothesis,notes
+clip_001,data/audio/hi_01.wav,hindi,मुझे आज शाम को 5 बजे कॉल करना,मुझे आज शाम को 5 बजे कॉल करना,Hindi clean with number
+clip_002,data/audio/hi_02.wav,hindi,यह काम आज नहीं हो पाएगा,यह काम आज हो पाएगा,Hindi dropped negation error
+clip_003,data/audio/en_01.wav,english,Please confirm flight 204 to Mumbai,Please confirm flight 204 to Mumbai,English clear command
+clip_004,data/audio/en_02.wav,english,Do not terminate the background session,Terminate the background session,English dropped negation
+clip_005,data/audio/cs_01.wav,code_switch,Kal morning 10 baje presentation schedule kar do,Kal morning 10 baje presentation schedule kar do,Hinglish accurate
+clip_006,data/audio/cs_02.wav,code_switch,Mera refund abhi tak process nahi hua,Mera refund abhi tak process hua,Hinglish dropped negation
+clip_007,data/audio/cs_03.wav,code_switch,Google meet ka link WhatsApp pe send karo,Google meet ka link WhatsApp par send karo,Hinglish preposition variation
+clip_008,data/audio/cs_04.wav,code_switch,Account number 9845 me paise transfer ho gaye,Account number 9840 me paise transfer ho gaye,Hinglish number digit substitution
